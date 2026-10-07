@@ -2,15 +2,12 @@
 
 | Dossier | Contenu |
 |---|---|
-| `produit/` | Cadrage, features, user stories, roadmap, architecture et pipeline |
-| `recherche/` | R&D, grille de qualité, prompt système Qwen, routage, compression |
-| `resultats/` | Résultats des tests (v1 à v5, comparIA) et données brutes JSON |
-| `scripts/` | Scripts de mesure et de corpus (lancer depuis la racine du dépôt) |
-| `plans/` | Plans de travail (QM, QH, E2, corrections) |
-| `soutenance/` | Support de soutenance, ROI, modèle économique |
+| `produit/` | Cadrage, fonctionnalités, user stories, roadmap, pipeline |
+| `recherche/` | Grille de qualité, prompt système de l'optimiseur, routage, compression, virage ML |
+| `resultats/` | Résultats des campagnes de test (v1 à v5, corpus comparIA) |
+| `soutenance/` | Support de la 2ᵉ soutenance |
 | `samples/` | Exemples d'export de conversations (ChatGPT, Claude, Gemini) |
 | `superpowers/` | Specs et plans de conception |
-| `Verif interface/` | Tests manuels de l'interface |
-| `_a_trier/` | Notes de travail à trier avant publication |
 
-Les jeux de données lourds (`*.parquet`, `*.jsonl`) ne sont pas versionnés.
+Le deck de présentation est servi par l'application sur `/pitch` (source : `frontend/public/pitch/`).
+Les jeux de données lourds ne sont pas versionnés.

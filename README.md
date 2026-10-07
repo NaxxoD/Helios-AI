@@ -38,7 +38,7 @@ Développeurs qui paient leurs tokens à la fin du mois, étudiants avec un budg
 
 ## Demo
 
-L'optimiseur analyse votre prompt en direct depuis la landing page — aucun compte requis. 3 échanges gratuits en mode chat, sans carte bancaire.
+Pas de démo hébergée : lancez le projet en local (voir ci-dessous) ou parcourez le deck de présentation dans `frontend/public/pitch/`.
 
 ---
 
