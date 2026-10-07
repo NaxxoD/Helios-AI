@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Helios AI">
+  <defs>
+    <linearGradient id="helios-ap-fav" x1="18" y1="18" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D8A0"></stop>
+      <stop offset="1" stop-color="#E8843C"></stop>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#0E1714"></rect>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" stroke="#34D8A0" stroke-opacity="0.18" stroke-width="1.5"></rect>
+  <circle cx="32" cy="32" r="18.5" stroke="url(#helios-ap-fav)" stroke-width="3.1"></circle>
+  <g stroke="url(#helios-ap-fav)" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 16.2 41.4 32"></path>
+    <path d="M46.5 36.6 28.3 36.6"></path>
+    <path d="M38.8 49 29.7 33"></path>
+    <path d="M22.6 47.8 32 32"></path>
+    <path d="M17.5 27.4 35.7 27.4"></path>
+    <path d="M25.2 15 34.3 31"></path>
+  </g>
+  <circle cx="32" cy="32" r="5.6" fill="url(#helios-ap-fav)"></circle>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Helios">
+  
+  <defs>
+    <linearGradient id="helios-grad-fav" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D8A0"></stop>
+      <stop offset="1" stop-color="#E8843C"></stop>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#helios-grad-fav)" stroke-width="3" stroke-linecap="round">
+    <path d="M32 2.5v7"></path><path d="M32 54.5v7"></path><path d="M2.5 32h7"></path><path d="M54.5 32h7"></path>
+    <path d="M11 11l5 5"></path><path d="M48 48l5 5"></path><path d="M53 11l-5 5"></path><path d="M11 53l5-5"></path>
+  </g>
+  <rect x="18" y="18" width="28" height="28" rx="7" stroke="url(#helios-grad-fav)" stroke-width="3.2"></rect>
+  <rect x="27" y="27" width="10" height="10" rx="2.4" fill="url(#helios-grad-fav)"></rect>
+</svg>

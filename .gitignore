@@ -1,0 +1,65 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env files (secrets)
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+
+# Builds
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Base de données locale (chaque dev a la sienne)
+*.db
+*.sqlite
+backend/instance/
+
+# IDE
+.vscode/
+.idea/
+# Claude Code
+.claude/
+
+# Design handoffs (sources locales, pas utiles dans le repo)
+design_handoff_helios_landing/
+design_handoff_helios_deck/
+helios-logo/
+
+# Vite cache
+frontend/.vite/
+
+frontend-react/
+backend/verify_user.py
+backend/set_admin.py
+
+# Syncthing
+.stfolder/
+
+# Perso / non-projet
+Admin/
+docs/R&D_AD.md
+docs/message*.md
+frontend/Design/uploads/
+
+# Graphify (généré)
+graphify-out/
+
+# Datasets lourds (parquet, jsonl bruts)
+*.parquet
+docs/*.jsonl
+analysis/qm/*_progress.jsonl

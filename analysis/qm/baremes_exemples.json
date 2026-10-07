@@ -1,0 +1,24 @@
+{
+  "_README": "Barèmes d'exemple HAND-AUTHORED pour le Profil B (docs/recherche/grille-qualite-helios.md §4.0). À N petit (20 paires), le doc recommande de hand-reviewer les barèmes plutôt que de les générer par LLM → élimine le biais du générateur pour la sonde. Chaque élément est VÉRIFIABLE (présent/absent) ; 'essentiel'=true → la réponse échoue sans ; 'essentiel'=false → bonus. On évite les exigences que la demande ne réclame pas (sinon on sur-crédite la verbosité). Prompts repris de smoke45_abc.json. Charger via rejudge_profilb.py --baremes.",
+  "c000": {
+    "demande": "Le partage de données (open data, cloud collaboratif) — paradoxe innovation/transparence vs cyberattaques/fuites : chiffres + exemples, tableau récapitulatif avantages/inconvénients, pistes d'action pour les entreprises.",
+    "elements": [
+      {"id": 1, "element": "Illustre au moins un AVANTAGE du partage de données avec un chiffre ou un exemple concret (innovation, transparence)", "essentiel": true},
+      {"id": 2, "element": "Illustre au moins un RISQUE (cyberattaque, fuite massive) avec un chiffre ou un exemple concret", "essentiel": true},
+      {"id": 3, "element": "Fournit un TABLEAU récapitulatif avantages / inconvénients", "essentiel": true},
+      {"id": 4, "element": "Propose des PISTES D'ACTION concrètes pour les entreprises", "essentiel": true},
+      {"id": 5, "element": "Chiffres réels et vérifiables (pas seulement des exemples nommés sans donnée)", "essentiel": false},
+      {"id": 6, "element": "Pistes d'action reliées explicitement aux risques identifiés (ou intégrées au tableau)", "essentiel": false}
+    ]
+  },
+  "c001": {
+    "demande": "Liste de serveurs / sociétés / liens (SRV-ABYLA-PROD/Stonal, SRV-APM/CNIL, ...) → 'peux-tu me faire un diagramme'.",
+    "elements": [
+      {"id": 1, "element": "Produit effectivement un DIAGRAMME ou un code de diagramme exécutable (Graphviz, mermaid...), PAS seulement une liste en prose", "essentiel": true},
+      {"id": 2, "element": "Regroupe les serveurs par SOCIÉTÉ", "essentiel": true},
+      {"id": 3, "element": "Couvre l'ENSEMBLE des serveurs fournis (pas un sous-ensemble)", "essentiel": true},
+      {"id": 4, "element": "Représente les LIENS/relations indiqués ('bidirectionnelle', 'vers X')", "essentiel": false},
+      {"id": 5, "element": "Format directement EXPLOITABLE (copiable dans un outil de rendu)", "essentiel": false}
+    ]
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "verdicts": [
+    {
+      "id": 157383,
+      "turns": 17,
+      "brut~": 3163,
+      "resume": 325,
+      "ratio": 0.05898366606170599,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.062562
+    },
+    {
+      "id": 479448,
+      "turns": 12,
+      "brut~": 14641,
+      "resume": 463,
+      "ratio": 0.03600311041990669,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.153586
+    },
+    {
+      "id": 226228,
+      "turns": 16,
+      "brut~": 14339,
+      "resume": 571,
+      "ratio": 0.030735278286144904,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.198582
+    },
+    {
+      "id": 192452,
+      "turns": 12,
+      "brut~": 3802,
+      "resume": 643,
+      "ratio": 0.14495040577096482,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.056485
+    },
+    {
+      "id": 431691,
+      "turns": 10,
+      "brut~": 3195,
+      "resume": 605,
+      "ratio": 0.1511744127936032,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.05162
+    },
+    {
+      "id": 316208,
+      "turns": 11,
+      "brut~": 4376,
+      "resume": 894,
+      "ratio": 0.15602094240837697,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.072434
+    },
+    {
+      "id": 565687,
+      "turns": 8,
+      "brut~": 3504,
+      "resume": 356,
+      "ratio": 0.08335284476703349,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.051734
+    },
+    {
+      "id": 508349,
+      "turns": 8,
+      "brut~": 4118,
+      "resume": 477,
+      "ratio": 0.06788103031165504,
+      "opus": "perte_mineure",
+      "sonnet": "perte_mineure",
+      "cost": 0.078041
+    },
+    {
+      "id": 619288,
+      "turns": 9,
+      "brut~": 5268,
+      "resume": 525,
+      "ratio": 0.07814825841024114,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.079879
+    },
+    {
+      "id": 1515266,
+      "turns": 9,
+      "brut~": 3355,
+      "resume": 62,
+      "ratio": 0.01428242340474545,
+      "opus": "perte_grave",
+      "sonnet": "fidele",
+      "cost": 0.047307
+    },
+    {
+      "id": 148849,
+      "turns": 10,
+      "brut~": 3346,
+      "resume": 490,
+      "ratio": 0.13787281935846932,
+      "opus": "perte_mineure",
+      "sonnet": "perte_mineure",
+      "cost": 0.046123
+    },
+    {
+      "id": 1174375,
+      "turns": 10,
+      "brut~": 1975,
+      "resume": 350,
+      "ratio": 0.12858192505510654,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.03438
+    },
+    {
+      "id": 593650,
+      "turns": 11,
+      "brut~": 17854,
+      "resume": 1302,
+      "ratio": 0.054474708171206226,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.268647
+    },
+    {
+      "id": 679269,
+      "turns": 9,
+      "brut~": 844,
+      "resume": 463,
+      "ratio": 0.4137622877569258,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.018997
+    },
+    {
+      "id": 916185,
+      "turns": 8,
+      "brut~": 5855,
+      "resume": 61,
+      "ratio": 0.00822878726561446,
+      "opus": "perte_grave",
+      "sonnet": "perte_grave",
+      "cost": 0.079497
+    },
+    {
+      "id": 536414,
+      "turns": 8,
+      "brut~": 13094,
+      "resume": 2500,
+      "ratio": 0.15029457737164842,
+      "opus": "perte_mineure",
+      "sonnet": "perte_mineure",
+      "cost": 0.208767
+    },
+    {
+      "id": 765780,
+      "turns": 15,
+      "brut~": 8542,
+      "resume": 765,
+      "ratio": 0.07543634750024653,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.120431
+    },
+    {
+      "id": 813763,
+      "turns": 12,
+      "brut~": 16113,
+      "resume": 680,
+      "ratio": 0.04017487888455631,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.198211
+    },
+    {
+      "id": 1001346,
+      "turns": 11,
+      "brut~": 2774,
+      "resume": 187,
+      "ratio": 0.04868523821921374,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.044592
+    },
+    {
+      "id": 955425,
+      "turns": 8,
+      "brut~": 422,
+      "resume": 241,
+      "ratio": 0.3668188736681887,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.011273
+    },
+    {
+      "id": 502811,
+      "turns": 15,
+      "brut~": 2227,
+      "resume": 535,
+      "ratio": 0.1778590425531915,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.039084
+    },
+    {
+      "id": 785907,
+      "turns": 12,
+      "brut~": 15138,
+      "resume": 1783,
+      "ratio": 0.09730408207814888,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.221712
+    },
+    {
+      "id": 735213,
+      "turns": 20,
+      "brut~": 26153,
+      "resume": 949,
+      "ratio": 0.0266513143113907,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.390453
+    },
+    {
+      "id": 749865,
+      "turns": 17,
+      "brut~": 42029,
+      "resume": 2500,
+      "ratio": 0.04435140505251206,
+      "opus": "perte_grave",
+      "sonnet": "perte_mineure",
+      "cost": 0.629098
+    },
+    {
+      "id": 1049098,
+      "turns": 14,
+      "brut~": 1775,
+      "resume": 62,
+      "ratio": 0.03653506187389511,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.020346
+    },
+    {
+      "id": 1558941,
+      "turns": 9,
+      "brut~": 11635,
+      "resume": 595,
+      "ratio": 0.029702476038338657,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.211225
+    },
+    {
+      "id": 189465,
+      "turns": 18,
+      "brut~": 3753,
+      "resume": 587,
+      "ratio": 0.09883818824717966,
+      "opus": "fidele",
+      "sonnet": "perte_mineure",
+      "cost": 0.068354
+    },
+    {
+      "id": 1180505,
+      "turns": 10,
+      "brut~": 2013,
+      "resume": 324,
+      "ratio": 0.18377765173000568,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.025721
+    },
+    {
+      "id": 183314,
+      "turns": 8,
+      "brut~": 5671,
+      "resume": 557,
+      "ratio": 0.07752261656228253,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.085493
+    },
+    {
+      "id": 35773,
+      "turns": 13,
+      "brut~": 4362,
+      "resume": 484,
+      "ratio": 0.08483786152497809,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.066694
+    },
+    {
+      "id": 1547922,
+      "turns": 12,
+      "brut~": 34030,
+      "resume": 376,
+      "ratio": 0.007995066873631164,
+      "opus": "fidele",
+      "sonnet": "perte_grave",
+      "cost": 0.500796
+    },
+    {
+      "id": 577011,
+      "turns": 14,
+      "brut~": 1671,
+      "resume": 336,
+      "ratio": 0.15101123595505617,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.029
+    },
+    {
+      "id": 267947,
+      "turns": 10,
+      "brut~": 2400,
+      "resume": 389,
+      "ratio": 0.15153876119984416,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.034172
+    },
+    {
+      "id": 136145,
+      "turns": 11,
+      "brut~": 4365,
+      "resume": 415,
+      "ratio": 0.07294779398839867,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.065828
+    },
+    {
+      "id": 1634872,
+      "turns": 9,
+      "brut~": 4326,
+      "resume": 722,
+      "ratio": 0.11420436570705474,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.076561
+    },
+    {
+      "id": 945246,
+      "turns": 8,
+      "brut~": 4248,
+      "resume": 457,
+      "ratio": 0.08829211746522411,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.061877
+    },
+    {
+      "id": 269938,
+      "turns": 12,
+      "brut~": 7421,
+      "resume": 329,
+      "ratio": 0.03693724037274054,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.100247
+    },
+    {
+      "id": 1067040,
+      "turns": 11,
+      "brut~": 9759,
+      "resume": 873,
+      "ratio": 0.07317073170731707,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.137605
+    },
+    {
+      "id": 194313,
+      "turns": 19,
+      "brut~": 7007,
+      "resume": 590,
+      "ratio": 0.07382382382382383,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.09308
+    },
+    {
+      "id": 306908,
+      "turns": 8,
+      "brut~": 3216,
+      "resume": 914,
+      "ratio": 0.18853135313531352,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.065466
+    },
+    {
+      "id": 734883,
+      "turns": 15,
+      "brut~": 10497,
+      "resume": 1053,
+      "ratio": 0.08363116511794139,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.149905
+    },
+    {
+      "id": 413212,
+      "turns": 9,
+      "brut~": 3609,
+      "resume": 294,
+      "ratio": 0.06886858749121574,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.052315
+    },
+    {
+      "id": 1332325,
+      "turns": 11,
+      "brut~": 20736,
+      "resume": 913,
+      "ratio": 0.032259204296516145,
+      "opus": "perte_grave",
+      "sonnet": "fidele",
+      "cost": 0.310504
+    },
+    {
+      "id": 383145,
+      "turns": 19,
+      "brut~": 10103,
+      "resume": 548,
+      "ratio": 0.10345478572777043,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.070084
+    },
+    {
+      "id": 1554416,
+      "turns": 8,
+      "brut~": 4811,
+      "resume": 611,
+      "ratio": 0.09640265067844746,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.076182
+    },
+    {
+      "id": 712889,
+      "turns": 8,
+      "brut~": 17960,
+      "resume": 385,
+      "ratio": 0.016274252863845796,
+      "opus": "perte_grave",
+      "sonnet": "fidele",
+      "cost": 0.256997
+    },
+    {
+      "id": 67066,
+      "turns": 9,
+      "brut~": 2483,
+      "resume": 275,
+      "ratio": 0.06758417301548292,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.045033
+    },
+    {
+      "id": 729857,
+      "turns": 13,
+      "brut~": 9665,
+      "resume": 494,
+      "ratio": 0.03972657820667471,
+      "opus": "perte_mineure",
+      "sonnet": "fidele",
+      "cost": 0.141039
+    },
+    {
+      "id": 137206,
+      "turns": 14,
+      "brut~": 2004,
+      "resume": 387,
+      "ratio": 0.14642451759364358,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.03415
+    },
+    {
+      "id": 21097,
+      "turns": 8,
+      "brut~": 5320,
+      "resume": 712,
+      "ratio": 0.10682670667666917,
+      "opus": "fidele",
+      "sonnet": "fidele",
+      "cost": 0.080948
+    }
+  ]
+}

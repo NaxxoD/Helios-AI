@@ -1,0 +1,262 @@
+{
+  "summary": {
+    "n": 19,
+    "judge": "claude-opus-4-8",
+    "profil_a_qwen_non_degrade": "9/19 (47%)",
+    "profil_b_qwen_non_degrade": "15/19 (79%)",
+    "kappa_profil_b": 0.882
+  },
+  "verdicts": [
+    {
+      "id": "c000",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "inacceptable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c001",
+      "profil_a": {
+        "candidate_vs_ref": "meilleure",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c002",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "tolerable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c003",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "tolerable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c004",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "tolerable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c006",
+      "profil_a": {
+        "candidate_vs_ref": "meilleure",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 0.833,
+        "score_cand": 0.667,
+        "compare": "candidate_moins_bonne"
+      },
+      "profil_b_judge2": "candidate_moins_bonne"
+    },
+    {
+      "id": "c007",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "tolerable"
+      },
+      "profil_b": {
+        "score_ref": 0.875,
+        "score_cand": 0.75,
+        "compare": "candidate_moins_bonne"
+      },
+      "profil_b_judge2": "candidate_moins_bonne"
+    },
+    {
+      "id": "c008",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "inacceptable"
+      },
+      "profil_b": {
+        "score_ref": 0.667,
+        "score_cand": 0.0,
+        "compare": "candidate_moins_bonne"
+      },
+      "judge2_error": "Expecting ':' delimiter: line 4 column 24 (char 79)"
+    },
+    {
+      "id": "c009",
+      "profil_a": {
+        "candidate_vs_ref": "egal",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c011",
+      "profil_a": {
+        "candidate_vs_ref": "meilleure",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 0.833,
+        "score_cand": 1.0,
+        "compare": "candidate_meilleure"
+      },
+      "profil_b_judge2": "candidate_meilleure"
+    },
+    {
+      "id": "c012",
+      "profil_a": {
+        "candidate_vs_ref": "meilleure",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 0.75,
+        "score_cand": 1.0,
+        "compare": "candidate_meilleure"
+      },
+      "profil_b_judge2": "candidate_meilleure"
+    },
+    {
+      "id": "c013",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "inacceptable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c014",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "inacceptable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c015",
+      "profil_a": {
+        "candidate_vs_ref": "egal",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c016",
+      "profil_a": {
+        "candidate_vs_ref": "egal",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 0.25,
+        "score_cand": 0.5,
+        "compare": "candidate_meilleure"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c017",
+      "skip": "couche1"
+    },
+    {
+      "id": "c018",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "tolerable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c019",
+      "profil_a": {
+        "candidate_vs_ref": "meilleure",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c020",
+      "profil_a": {
+        "candidate_vs_ref": "moins_bonne",
+        "verdict": "tolerable"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 1.0,
+        "compare": "equivalent"
+      },
+      "profil_b_judge2": "equivalent"
+    },
+    {
+      "id": "c021",
+      "profil_a": {
+        "candidate_vs_ref": "meilleure",
+        "verdict": "equivalent"
+      },
+      "profil_b": {
+        "score_ref": 1.0,
+        "score_cand": 0.833,
+        "compare": "candidate_moins_bonne"
+      },
+      "profil_b_judge2": "candidate_moins_bonne"
+    }
+  ]
+}

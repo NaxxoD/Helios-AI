@@ -1,0 +1,248 @@
+/* =============================================================
+   Helios AI — EcoIA Tracker
+   Design Tokens: Colors, Typography, Spacing, Radii, Shadows
+   ============================================================= */
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Surfaces — fond éco (noir teinté vert) ---------- */
+  --bg-base:        #0b0e0d;   /* app background — noir légèrement vert */
+  --bg-surface:     #111c18;   /* cards, table headers, inputs */
+  --bg-surface-2:   #0e1512;   /* elevation subtile */
+  --bg-hover:       #182421;   /* row hover, control hover */
+  --bg-input:       #0b0e0d;   /* form inputs */
+
+  /* ---------- Borders (teintés vert) ---------- */
+  --border:         #1a2822;   /* default border */
+  --border-strong:  #233830;   /* focused / emphasized */
+  --border-subtle:  #111c18;   /* table row dividers */
+
+  /* ---------- Text ---------- */
+  --fg:             #f0faf5;   /* primary — légèrement vert-blanc */
+  --fg-2:           #d4ede3;   /* inputs, body emphasis */
+  --fg-muted:       #7aab92;   /* secondary, labels */
+  --fg-dim:         #4a7060;   /* tertiary, captions, placeholders */
+
+  /* ---------- Accent principal — émeraude (éco, positif, économies) ---------- */
+  --accent:           #34d399;
+  --accent-hover:     #4adeaa;
+  --accent-press:     #2aba82;
+  --accent-soft:      rgba(52, 211, 153, 0.12);
+  --accent-rgb:       52, 211, 153;
+
+  /* ---------- Positif / éthique ---------- */
+  --ok:               #10b981;   /* vert légèrement différent de l'accent */
+  --ok-soft:          rgba(16, 185, 129, 0.12);
+
+  /* ---------- Ambre — énergie thermique, chaleur ---------- */
+  --warn:             #f97316;
+  --warn-soft:        rgba(249, 115, 22, 0.12);
+
+  /* ---------- Sources / haute consommation ---------- */
+  --sources:          #fb923c;   /* orange plus chaud */
+  --sources-soft:     rgba(251, 146, 60, 0.12);
+
+  /* ---------- Violet — CO₂ évité ---------- */
+  --co2-avoided:      #a78bfa;
+  --co2-avoided-soft: rgba(167, 139, 250, 0.12);
+
+  /* ---------- Danger ---------- */
+  --danger:           #ef4444;
+  --danger-soft:      rgba(239, 68, 68, 0.12);
+
+  /* ---------- Typography ---------- */
+  --font-sans:    "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Orbitron", "Inter", ui-sans-serif, sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --t-xs:    11px;
+  --t-sm:    12px;
+  --t-base:  14px;
+  --t-md:    15px;
+  --t-lg:    18px;
+  --t-xl:    22px;
+  --t-2xl:   28px;
+  --t-kpi:   34px;   /* KPI numeric values */
+  --t-3xl:   40px;
+
+  --lh-tight:   1.15;
+  --lh-snug:    1.3;
+  --lh-normal:  1.5;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold:600;
+  --fw-bold:    700;
+
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:    0.04em;
+  --tracking-caps:    0.08em;
+
+  /* ---------- Spacing ---------- */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+
+  /* ---------- Radii ---------- */
+  --r-sm:  4px;
+  --r-md:  6px;
+  --r-lg:  8px;
+  --r-xl:  10px;   /* default for cards / kpi */
+  --r-2xl: 12px;   /* max — used sparingly */
+  --r-pill: 999px;
+
+  /* ---------- Shadows (sober — no heavy drops) ---------- */
+  --shadow-0: none;
+  --shadow-1: 0 1px 0 0 rgba(0,0,0,0.25);                 /* hairline */
+  --shadow-2: 0 1px 2px rgba(0,0,0,0.35);                 /* card */
+  --shadow-focus: 0 0 0 3px rgba(52, 211, 153, 0.25);      /* focus ring — émeraude */
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast:  120ms;
+  --t-base-d: 180ms;
+  --t-slow:  280ms;
+}
+
+/* =============================================================
+   Light theme overrides — [data-theme="light"]
+   ============================================================= */
+
+[data-theme="light"] {
+  --bg-base:        #f0f7f4;   /* blanc légèrement vert */
+  --bg-surface:     #ffffff;
+  --bg-surface-2:   #f5faf7;
+  --bg-hover:       #e8f5ef;
+  --bg-input:       #ffffff;
+
+  --border:         #c8e0d6;
+  --border-strong:  #a8c8bc;
+  --border-subtle:  #e8f5ef;
+
+  --fg:             #0a1f14;
+  --fg-2:           #1a3828;
+  --fg-muted:       #3d7a5c;
+  --fg-dim:         #7aab92;
+
+  --accent:         #059669;   /* émeraude plus foncé pour le light */
+  --accent-hover:   #047857;
+  --accent-press:   #065f46;
+  --accent-soft:    rgba(5, 150, 105, 0.10);
+
+  --ok:             #16a34a;
+  --ok-soft:        rgba(22, 163, 74, 0.12);
+  --warn:           #ea580c;
+  --warn-soft:      rgba(234, 88, 12, 0.12);
+  --sources:        #c2410c;
+  --sources-soft:   rgba(194, 65, 12, 0.12);
+  --co2-avoided:    #7c3aed;
+  --co2-avoided-soft: rgba(124, 58, 237, 0.12);
+  --danger:         #dc2626;
+  --danger-soft:    rgba(220, 38, 38, 0.12);
+
+  --shadow-2: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-focus: 0 0 0 3px rgba(5, 150, 105, 0.25);
+}
+
+/* =============================================================
+   Semantic element styles — apply to bare HTML elements
+   ============================================================= */
+
+html, body {
+  background: var(--bg-base);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--t-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {
+  font-size: var(--t-2xl);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0;
+}
+h2, .h2 {
+  font-size: var(--t-xl);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-semibold);
+  color: var(--fg);
+  margin: 0;
+}
+h3, .h3 {
+  font-size: var(--t-lg);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-semibold);
+  color: var(--fg);
+  margin: 0;
+}
+p, .body {
+  font-size: var(--t-base);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  margin: 0;
+}
+small, .caption {
+  font-size: var(--t-sm);
+  color: var(--fg-muted);
+}
+.label {
+  font-size: var(--t-xs);
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-weight: var(--fw-medium);
+}
+code, kbd, samp, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+.kpi-value {
+  font-size: var(--t-kpi);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.05;
+}
+
+/* Focus visibility — sober, accessible */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--r-md);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-soft);
+  color: var(--fg);
+}

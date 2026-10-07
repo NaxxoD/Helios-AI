@@ -1,0 +1,284 @@
+{
+  "verdicts": [
+    {
+      "id": 222592,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.018812
+    },
+    {
+      "id": 248697,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.015823999999999998
+    },
+    {
+      "id": 237991,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.041083
+    },
+    {
+      "id": 165090,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.037716
+    },
+    {
+      "id": 197192,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.030818
+    },
+    {
+      "id": 468791,
+      "ends_user": false,
+      "cls_default": "continuation",
+      "cls_fixed": "continuation",
+      "cost": 0.023778
+    },
+    {
+      "id": 453694,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.01439
+    },
+    {
+      "id": 336387,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.019029
+    },
+    {
+      "id": 366848,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.028458999999999998
+    },
+    {
+      "id": 486339,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.015565
+    },
+    {
+      "id": 512661,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.014992
+    },
+    {
+      "id": 506013,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.016909999999999998
+    },
+    {
+      "id": 518088,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.018035000000000002
+    },
+    {
+      "id": 537936,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.021232
+    },
+    {
+      "id": 579262,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.035761
+    },
+    {
+      "id": 585291,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.018285999999999997
+    },
+    {
+      "id": 560037,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.017936999999999998
+    },
+    {
+      "id": 591713,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.020224
+    },
+    {
+      "id": 605320,
+      "ends_user": false,
+      "cls_default": "continuation",
+      "cls_fixed": "continuation",
+      "cost": 0.04228
+    },
+    {
+      "id": 599190,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.028543
+    },
+    {
+      "id": 614974,
+      "ends_user": false,
+      "cls_default": "continuation",
+      "cls_fixed": "continuation",
+      "cost": 0.031474999999999996
+    },
+    {
+      "id": 596466,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.030272
+    },
+    {
+      "id": 548798,
+      "ends_user": true,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.06527100000000001
+    },
+    {
+      "id": 634843,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.020367
+    },
+    {
+      "id": 443887,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.020614
+    },
+    {
+      "id": 624902,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.024561
+    },
+    {
+      "id": 1177896,
+      "ends_user": false,
+      "cls_default": "continuation",
+      "cls_fixed": "continuation",
+      "cost": 0.031617
+    },
+    {
+      "id": 1144062,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.041478
+    },
+    {
+      "id": 1111474,
+      "ends_user": true,
+      "cls_default": "continuation",
+      "cls_fixed": "continuation",
+      "cost": 0.04140900000000001
+    },
+    {
+      "id": 1236517,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.019397
+    },
+    {
+      "id": 681909,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.035472
+    },
+    {
+      "id": 662435,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.059892999999999995
+    },
+    {
+      "id": 1529195,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.037629
+    },
+    {
+      "id": 665385,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.0158
+    },
+    {
+      "id": 1200092,
+      "ends_user": true,
+      "cls_default": "continuation",
+      "cls_fixed": "resume",
+      "cost": 0.090951
+    },
+    {
+      "id": 676188,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.026338
+    },
+    {
+      "id": 744656,
+      "ends_user": false,
+      "cls_default": "continuation",
+      "cls_fixed": "continuation",
+      "cost": 0.024489999999999998
+    },
+    {
+      "id": 685291,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.017228999999999998
+    },
+    {
+      "id": 739062,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.019382
+    },
+    {
+      "id": 734693,
+      "ends_user": false,
+      "cls_default": "resume",
+      "cls_fixed": "resume",
+      "cost": 0.015161
+    }
+  ]
+}

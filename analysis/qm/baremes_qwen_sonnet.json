@@ -1,0 +1,196 @@
+{
+  "_README": "20 barèmes hand-authored pour les paires de qwen_sonnet_records.json (Profil B, docs/recherche/grille-qualite-helios.md §4.0). Rédigés À L'AVEUGLE des réponses (depuis la demande seule) → pas de biais vers raw ou qwen. 'essentiel'=true : la réponse échoue sans ; false : bonus. On liste l'ESSENTIEL EXIGÉ par la demande, pas des nice-to-have (sinon Profil B sur-crédite la verbosité). Le runner n'utilise que la clé 'elements'. Lancer : rejudge_profilb.py --in ../../docs/qwen_sonnet_records.json --ref-key raw --cand-key qwen --baremes baremes_qwen_sonnet.json",
+  "c000": {
+    "demande": "Paradoxe partage de données : chiffres+exemples, tableau avantages/inconvénients, pistes d'action entreprises.",
+    "elements": [
+      {"id": 1, "element": "Illustre au moins un AVANTAGE avec un chiffre ou un exemple concret", "essentiel": true},
+      {"id": 2, "element": "Illustre au moins un RISQUE (cyberattaque/fuite) avec un chiffre ou un exemple concret", "essentiel": true},
+      {"id": 3, "element": "Fournit un TABLEAU récapitulatif avantages / inconvénients", "essentiel": true},
+      {"id": 4, "element": "Propose des PISTES D'ACTION concrètes pour les entreprises", "essentiel": true},
+      {"id": 5, "element": "Chiffres réels et vérifiables (pas seulement des exemples nommés)", "essentiel": false}
+    ]
+  },
+  "c001": {
+    "demande": "Liste serveurs/sociétés/liens → faire un diagramme.",
+    "elements": [
+      {"id": 1, "element": "Produit un DIAGRAMME ou un code de diagramme exécutable (Graphviz/mermaid), PAS une liste en prose", "essentiel": true},
+      {"id": 2, "element": "Regroupe les serveurs par SOCIÉTÉ", "essentiel": true},
+      {"id": 3, "element": "Couvre l'ENSEMBLE des serveurs fournis", "essentiel": true},
+      {"id": 4, "element": "Représente les LIENS/relations indiqués ('bidirectionnelle', 'vers X')", "essentiel": false},
+      {"id": 5, "element": "Format directement EXPLOITABLE (copiable dans un outil)", "essentiel": false}
+    ]
+  },
+  "c002": {
+    "demande": "Plan de cours fractions 5e : intro + 3 activités progressives (exemples concrets) + conclusion, en liste à puces.",
+    "elements": [
+      {"id": 1, "element": "Introduction sur les fractions (définition)", "essentiel": true},
+      {"id": 2, "element": "Trois activités progressives avec exemples concrets", "essentiel": true},
+      {"id": 3, "element": "Conclusion qui résume les apprentissages", "essentiel": true},
+      {"id": 4, "element": "Présenté sous forme de liste à puces", "essentiel": true},
+      {"id": 5, "element": "Inclut une activité ludique", "essentiel": false},
+      {"id": 6, "element": "Adapté au niveau 5e débutant", "essentiel": false}
+    ]
+  },
+  "c003": {
+    "demande": "Rédiger un avis de vol pour Air France, MAIS 'pose-moi les questions nécessaires pour le commentaire parfait'.",
+    "elements": [
+      {"id": 1, "element": "POSE des questions de clarification (ne rédige pas l'avis directement sans demander)", "essentiel": true},
+      {"id": 2, "element": "Les questions couvrent les aspects clés d'un avis de vol (confort, service, ponctualité, restauration...)", "essentiel": true},
+      {"id": 3, "element": "Questions organisées / exploitables", "essentiel": false}
+    ]
+  },
+  "c004": {
+    "demande": "Série de questions quiz sur la décentralisation pour entraîner au concours rédacteur principal 2e classe.",
+    "elements": [
+      {"id": 1, "element": "Produit une série de questions de quiz", "essentiel": true},
+      {"id": 2, "element": "Les questions portent sur la décentralisation", "essentiel": true},
+      {"id": 3, "element": "Niveau adapté au concours visé", "essentiel": true},
+      {"id": 4, "element": "Fournit les réponses / corrigé", "essentiel": false},
+      {"id": 5, "element": "Variété de formats (QCM, vrai/faux, ouvertes)", "essentiel": false}
+    ]
+  },
+  "c006": {
+    "demande": "Compléter une liste de marques de chaussures de trail SANS remettre les doublons (liste fournie).",
+    "elements": [
+      {"id": 1, "element": "Propose des marques de trail NOUVELLES (absentes de la liste fournie)", "essentiel": true},
+      {"id": 2, "element": "AUCUN doublon avec la liste fournie (contrainte explicite)", "essentiel": true},
+      {"id": 3, "element": "Les propositions sont bien des marques de chaussures de trail", "essentiel": true}
+    ]
+  },
+  "c007": {
+    "demande": "Meilleures séries 2025 toutes plateformes : tableau classement + plateforme streaming + note moyenne + lien fiche/extrait.",
+    "elements": [
+      {"id": 1, "element": "Tableau de classement de séries 2025", "essentiel": true},
+      {"id": 2, "element": "Colonne plateforme de streaming", "essentiel": true},
+      {"id": 3, "element": "Colonne note moyenne", "essentiel": true},
+      {"id": 4, "element": "Colonne lien (fiche ou extrait vidéo)", "essentiel": true},
+      {"id": 5, "element": "Liens réels/plausibles", "essentiel": false}
+    ]
+  },
+  "c008": {
+    "demande": "Compléter une liste de marques de chaussures de trail, instruction : pas de doublons (liste fournie).",
+    "elements": [
+      {"id": 1, "element": "Propose des marques de trail NOUVELLES (absentes de la liste fournie)", "essentiel": true},
+      {"id": 2, "element": "AUCUN doublon avec la liste fournie", "essentiel": true},
+      {"id": 3, "element": "Les propositions sont bien des marques de chaussures de trail", "essentiel": true}
+    ]
+  },
+  "c009": {
+    "demande": "Améliorer un site WordPress : comment faire, étapes de la refonte, meilleurs outils.",
+    "elements": [
+      {"id": 1, "element": "Explique comment améliorer/refondre le site", "essentiel": true},
+      {"id": 2, "element": "Liste les ÉTAPES de la refonte", "essentiel": true},
+      {"id": 3, "element": "Recommande des OUTILS", "essentiel": true},
+      {"id": 4, "element": "Outils spécifiquement adaptés à WordPress", "essentiel": false},
+      {"id": 5, "element": "Étapes ordonnées / priorisées", "essentiel": false}
+    ]
+  },
+  "c011": {
+    "demande": "Lister modèles de clavier (touches fines, switch multi-devices, rétroéclairage, autonomie) en tableau : nom, marque, lien Amazon.fr, prix, autonomie.",
+    "elements": [
+      {"id": 1, "element": "Tableau de modèles de clavier", "essentiel": true},
+      {"id": 2, "element": "Colonnes demandées : nom, marque, lien Amazon.fr, prix, autonomie", "essentiel": true},
+      {"id": 3, "element": "Modèles respectant les critères (touches fines, switch multi-devices, rétroéclairage)", "essentiel": true},
+      {"id": 4, "element": "Liens Amazon.fr réels", "essentiel": false},
+      {"id": 5, "element": "Année de production indiquée", "essentiel": false}
+    ]
+  },
+  "c012": {
+    "demande": "Prévoyance MGEFI (fonction publique) couvre-t-elle le jour de carence d'un arrêt de 2j en janvier ? (moitié du salaire = primes).",
+    "elements": [
+      {"id": 1, "element": "Répond à la question : la prévoyance couvre-t-elle ce jour de carence", "essentiel": true},
+      {"id": 2, "element": "Tient compte du contexte (fonction publique, jour de carence, part de primes)", "essentiel": true},
+      {"id": 3, "element": "Recommande de vérifier les conditions exactes du contrat MGEFI", "essentiel": false},
+      {"id": 4, "element": "Explique le mécanisme (carence / indemnisation prévoyance)", "essentiel": false}
+    ]
+  },
+  "c013": {
+    "demande": "Ton de spécialiste hifi : quel changement de câble pour une écoute texturée/immersive/large scène (système Lindemann/Naim/AE520 décrit).",
+    "elements": [
+      {"id": 1, "element": "Recommande un changement de câble précis", "essentiel": true},
+      {"id": 2, "element": "Adapté au système décrit (composants nommés)", "essentiel": true},
+      {"id": 3, "element": "Relie la reco aux objectifs sonores (texture, immersion, scène)", "essentiel": true},
+      {"id": 4, "element": "Adopte le ton de spécialiste hifi", "essentiel": false},
+      {"id": 5, "element": "Justification technique", "essentiel": false}
+    ]
+  },
+  "c014": {
+    "demande": "(Identique c013) Spécialiste hifi : quel câble pour écoute texturée/immersive/large scène.",
+    "elements": [
+      {"id": 1, "element": "Recommande un changement de câble précis", "essentiel": true},
+      {"id": 2, "element": "Adapté au système décrit (composants nommés)", "essentiel": true},
+      {"id": 3, "element": "Relie la reco aux objectifs sonores (texture, immersion, scène)", "essentiel": true},
+      {"id": 4, "element": "Adopte le ton de spécialiste hifi", "essentiel": false},
+      {"id": 5, "element": "Justification technique", "essentiel": false}
+    ]
+  },
+  "c015": {
+    "demande": "Turn over 21.38% (inclut mouvements internes) : quelle conclusion, ça signifie quoi ?",
+    "elements": [
+      {"id": 1, "element": "Interprète le taux (que signifie 21,38 %)", "essentiel": true},
+      {"id": 2, "element": "Tient compte de la spécificité : inclut les mouvements internes, pas seulement entrées/sorties", "essentiel": true},
+      {"id": 3, "element": "Propose une conclusion / analyse exploitable", "essentiel": true},
+      {"id": 4, "element": "Repères / benchmarks sectoriels", "essentiel": false},
+      {"id": 5, "element": "Nuance sur les limites de l'interprétation", "essentiel": false}
+    ]
+  },
+  "c016": {
+    "demande": "Business Plan location audiovisuel Hauts-de-France : étude de marché + concurrence (locale/nationale/Belgique), faisabilité + financement (2×3000€ net), plan d'action ; pose des questions.",
+    "elements": [
+      {"id": 1, "element": "Aborde l'étude de marché + analyse de la concurrence (locale/nationale/Belgique)", "essentiel": true},
+      {"id": 2, "element": "Aborde la faisabilité + plan de financement (contrainte 2 rémunérations à 3000€ net)", "essentiel": true},
+      {"id": 3, "element": "Propose un plan d'action de déploiement", "essentiel": true},
+      {"id": 4, "element": "POSE des questions de clarification (demandé explicitement)", "essentiel": true},
+      {"id": 5, "element": "Exemples concrets / premières pistes clients", "essentiel": false}
+    ]
+  },
+  "c017": {
+    "demande": "Scénario pédagogique formation appels d'offres pour débutants : exemples concrets + cas pratiques.",
+    "elements": [
+      {"id": 1, "element": "Scénario pédagogique structuré", "essentiel": true},
+      {"id": 2, "element": "Exemples concrets", "essentiel": true},
+      {"id": 3, "element": "Cas pratiques à résoudre", "essentiel": true},
+      {"id": 4, "element": "Adapté aux débutants", "essentiel": true},
+      {"id": 5, "element": "Progression pédagogique claire", "essentiel": false}
+    ]
+  },
+  "c018": {
+    "demande": "Outil IA pour retranscrire des conseils municipaux, fiable et peu coûteux : tableau comparatif ; pose des questions si besoin.",
+    "elements": [
+      {"id": 1, "element": "Tableau comparatif d'outils de retranscription IA", "essentiel": true},
+      {"id": 2, "element": "Critères fiabilité ET coût présents", "essentiel": true},
+      {"id": 3, "element": "Outils adaptés au cas (retranscription de réunions/conseils, français)", "essentiel": true},
+      {"id": 4, "element": "Pose des questions complémentaires", "essentiel": false},
+      {"id": 5, "element": "Recommandation finale", "essentiel": false}
+    ]
+  },
+  "c019": {
+    "demande": "Combien coûte un cheval de sport (saut 1m30, 6 ans, pas sorti en concours, généalogie détaillée) ?",
+    "elements": [
+      {"id": 1, "element": "Donne une estimation de prix (fourchette)", "essentiel": true},
+      {"id": 2, "element": "Tient compte des critères fournis (niveau de saut, âge, généalogie, absence de concours)", "essentiel": true},
+      {"id": 3, "element": "Explique les facteurs qui influencent le prix", "essentiel": false},
+      {"id": 4, "element": "Nuance sur la variabilité du marché", "essentiel": false}
+    ]
+  },
+  "c020": {
+    "demande": "Programme de sport sur 5 jours mêlant cardio, muscu, TRX, calisthénie ; objectifs perte de gras + prise de muscle + force fonctionnelle.",
+    "elements": [
+      {"id": 1, "element": "Programme couvrant 5 jours", "essentiel": true},
+      {"id": 2, "element": "Mêle les 4 modalités demandées (cardio, musculation, TRX, calisthénie)", "essentiel": true},
+      {"id": 3, "element": "Aligné sur les 3 objectifs (perte de gras, prise de muscle, force fonctionnelle)", "essentiel": true},
+      {"id": 4, "element": "Détail jour par jour", "essentiel": false},
+      {"id": 5, "element": "Progressivité / répartition équilibrée", "essentiel": false}
+    ]
+  },
+  "c021": {
+    "demande": "Calculer le MFU (Model FLOPs Utilization) d'un modèle PyTorch fourni (Linear + GRU + decoder).",
+    "elements": [
+      {"id": 1, "element": "Calcule ou explique précisément comment obtenir le MFU pour ce modèle", "essentiel": true},
+      {"id": 2, "element": "Prend en compte l'architecture fournie (Linear, GRU, dimensions)", "essentiel": true},
+      {"id": 3, "element": "Raisonnement exact (FLOPs ; MFU = FLOPs réels / FLOPs crête théoriques)", "essentiel": true},
+      {"id": 4, "element": "Identifie les infos manquantes nécessaires (FLOPs crête du hardware, batch size, seq len)", "essentiel": false},
+      {"id": 5, "element": "Donne la formule / méthodo réutilisable", "essentiel": false}
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+Vous: Explique-moi le concept de récursivité en programmation avec un exemple simple.
+
+Gemini: La récursivité, c'est quand une fonction s'appelle elle-même pour résoudre un problème en le décomposant en sous-problèmes plus simples. Il y a deux éléments essentiels : un cas de base (condition d'arrêt) et un appel récursif.
+
+Exemple classique avec la factorielle : def factorielle(n): if n == 0 or n == 1: return 1 (cas de base) ; return n * factorielle(n - 1) (appel récursif). Donc factorielle(4) = 4 × factorielle(3) = 4 × 3 × factorielle(2) = 4 × 3 × 2 × 1 = 24. Chaque appel résout une version plus petite du problème jusqu'à atteindre le cas de base.
+
+Vous: C'est quoi la différence entre récursivité et itération ? Quand utiliser l'une ou l'autre ?
+
+Gemini: L'itération utilise des boucles (for/while), la récursivité utilise des appels de fonctions. Les deux peuvent résoudre les mêmes problèmes mais avec des compromis différents.
+
+Récursivité : code plus lisible pour les problèmes naturellement récursifs (arbres, graphes, fractales), mais consomme plus de mémoire (pile d'appels) et risque de stack overflow sur de grandes profondeurs. Itération : plus performante en mémoire et en vitesse, mais parfois moins intuitive. Règle pratique : utilise la récursivité pour parcourir des structures arborescentes ou quand l'algorithme se définit naturellement en termes de lui-même (ex: quicksort, DFS). Utilise l'itération pour les traitements séquentiels simples. En Python, préfère souvent l'itération car la limite de récursion par défaut est 1000 appels.
+
+Vous: Comment fonctionne la récursivité terminale et est-ce que Python l'optimise ?
+
+Gemini: La récursion terminale (tail recursion) est un cas particulier où l'appel récursif est la dernière opération de la fonction, sans autre calcul après. Exemple : def fact_tail(n, accumulateur=1): if n <= 1: return accumulateur ; return fact_tail(n-1, n * accumulateur). Ici, le résultat partiel est passé en paramètre au lieu d'être calculé au retour.
+
+Python n'optimise PAS la récursion terminale, contrairement à Haskell, Scala ou Erlang. C'est un choix délibéré de Guido van Rossum pour préserver les stack traces lisibles lors du débogage. Résultat : même en récursion terminale, Python crée un nouveau frame de pile à chaque appel. Si tu veux la performance de la TCO en Python, convertis manuellement en itération ou utilise une boucle avec un accumulateur. Le module sys.setrecursionlimit() permet d'augmenter la limite mais ce n'est pas une solution propre.
+
+Vous: Montre-moi un exemple concret de récursivité avec un arbre binaire.
+
+Gemini: Voici un exemple complet avec un arbre binaire de recherche. Définition du nœud : class Noeud: def __init__(self, valeur): self.valeur = valeur ; self.gauche = None ; self.droite = None.
+
+Insertion récursive : def inserer(noeud, valeur): if noeud is None: return Noeud(valeur) ; if valeur < noeud.valeur: noeud.gauche = inserer(noeud.gauche, valeur) ; elif valeur > noeud.valeur: noeud.droite = inserer(noeud.droite, valeur) ; return noeud.
+
+Parcours en ordre (inorder) qui retourne les valeurs triées : def inorder(noeud): if noeud is None: return [] ; return inorder(noeud.gauche) + [noeud.valeur] + inorder(noeud.droite).
+
+Utilisation : racine = None ; for v in [5, 3, 7, 1, 4]: racine = inserer(racine, v) ; print(inorder(racine)) affiche [1, 3, 4, 5, 7]. La récursivité est ici naturelle car la structure de l'arbre est elle-même récursive : chaque sous-arbre est aussi un arbre.
+
+Vous: Merci, c'est très clair ! Une dernière chose, c'est quoi la mémoïsation et comment ça aide la récursivité ?
+
+Gemini: La mémoïsation consiste à mettre en cache les résultats des appels récursifs déjà calculés pour éviter de les recalculer. C'est crucial pour les algorithmes avec des sous-problèmes qui se chevauchent, comme Fibonacci.
+
+Sans mémoïsation, fib(40) fait environ 300 millions d'appels. Avec : from functools import lru_cache ; @lru_cache(maxsize=None) ; def fib(n): if n < 2: return n ; return fib(n-1) + fib(n-2). Maintenant fib(40) fait seulement 41 appels car chaque résultat est stocké. Python fournit @lru_cache et @cache (Python 3.9+) dans functools, ce qui rend l'implémentation triviale. La mémoïsation transforme une complexité exponentielle O(2^n) en O(n) pour Fibonacci. C'est la base de la programmation dynamique top-down.

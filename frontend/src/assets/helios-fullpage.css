@@ -1,0 +1,92 @@
+/* =========================================================================
+   helios-fullpage.css — styles du mode "fullpage" (une section = un écran).
+   TOUT est préfixé .fp-on : tant que le JS n'a pas ajouté la classe fp-on
+   sur <html>/<body>, la page garde son scroll vertical NORMAL.
+   => indispensable pour le SSR et le fallback prefers-reduced-motion.
+   ========================================================================= */
+
+/* le conteneur qui glisse d'un écran à l'autre */
+html.fp-on, body.fp-on { height: 100%; overflow: hidden; }
+
+body.fp-on #fp {
+  position: fixed; top: 0; left: 0; width: 100%;
+  transition: transform .92s cubic-bezier(.83, 0, .17, 1);
+  will-change: transform;
+}
+
+/* chaque section occupe tout l'écran */
+body.fp-on .panel {
+  height: 100vh; width: 100%;
+  display: flex; flex-direction: column;
+  overflow-y: auto; overflow-x: hidden;
+  position: relative;
+  border-top: none !important;        /* pas de séparateur entre écrans */
+  padding-top: 0; padding-bottom: 0;
+  scrollbar-width: none;
+}
+body.fp-on .panel::-webkit-scrollbar { width: 0; height: 0; }
+
+/* contenu centré verticalement (le ".wrap" est le conteneur interne de chaque section :
+   adapte ce sélecteur au tien, ex. .container, .section-inner …) */
+body.fp-on .panel > .wrap {
+  margin-top: auto; margin-bottom: auto;
+  padding-top: 92px;                  /* dégage la barre de nav fixe */
+  padding-bottom: 40px;
+}
+/* hero : pas de padding-top supplémentaire */
+body.fp-on .panel.hero > .wrap { padding-top: 0; }
+
+/* section plus HAUTE que l'écran : on l'aligne en haut et on la laisse défiler
+   en interne (le JS lui met la classe .tall), puis on bascule à la fin */
+body.fp-on .panel.tall > .wrap {
+  margin-top: 0; margin-bottom: 0;
+  padding-top: 104px; padding-bottom: 72px;
+}
+
+/* dernier écran : CTA centré, footer collé en bas */
+body.fp-on .panel.final { justify-content: center; }
+body.fp-on .panel.final > footer {
+  position: absolute; left: 0; bottom: 0; width: 100%;
+}
+
+/* la barre de nav passe en fixe */
+body.fp-on header.nav,
+body.fp-on .nav { position: fixed; top: 0; left: 0; right: 0; }
+
+/* -------------------------------------------------------------------------
+   Révélation du contenu À L'ENTRÉE de chaque écran (remplace le reveal-au-scroll)
+   ------------------------------------------------------------------------- */
+.reveal { transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+body.fp-on .panel .reveal        { opacity: 0; transform: translateY(42px); }
+body.fp-on .panel.active .reveal { opacity: 1; transform: none; }
+/* cascade : décale les enfants d'une même grille (adapte aux tes classes) */
+body.fp-on .panel.active .reveal:nth-child(2) { transition-delay: .07s; }
+body.fp-on .panel.active .reveal:nth-child(3) { transition-delay: .14s; }
+body.fp-on .panel.active .reveal:nth-child(4) { transition-delay: .21s; }
+
+/* -------------------------------------------------------------------------
+   Points de repère (créés par le JS dans <div class="fp-dots">)
+   ------------------------------------------------------------------------- */
+.fp-dots {
+  position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+  z-index: 55; display: none; flex-direction: column; gap: 13px; align-items: flex-end;
+}
+body.fp-on .fp-dots { display: flex; }
+.fp-dots button { display: flex; align-items: center; gap: 11px; background: none; border: none; cursor: pointer; padding: 0; }
+.fp-dots .d {
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid var(--text-3, #677169); transition: all .3s; flex: 0 0 auto;
+}
+.fp-dots .lbl {
+  font-family: var(--font-mono, monospace); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--text-2, #9AA8A0); opacity: 0; transform: translateX(7px); transition: all .25s; white-space: nowrap;
+}
+.fp-dots button:hover .lbl { opacity: 1; transform: none; }
+.fp-dots button:hover .d   { border-color: var(--green, #34D8A0); }
+.fp-dots button.on .d {
+  background: var(--green, #34D8A0); border-color: var(--green, #34D8A0);
+  box-shadow: 0 0 12px rgba(52, 216, 160, .7);
+}
+.fp-dots button.on .lbl { opacity: 1; transform: none; color: var(--text, #E7EFEA); }
+
+@media (max-width: 680px) { .fp-dots { display: none !important; } }

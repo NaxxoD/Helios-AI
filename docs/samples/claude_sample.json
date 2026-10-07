@@ -1,0 +1,83 @@
+[
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "Conception d'une API REST Flask",
+    "created_at": "2024-04-06T10:00:00.000Z",
+    "updated_at": "2024-04-06T10:45:00.000Z",
+    "account": { "uuid": "user-uuid-123" },
+    "messages": [
+      {
+        "uuid": "msg-001",
+        "sender": "human",
+        "text": "Je dois concevoir une API REST pour une application de gestion de tâches. J'utilise Flask. Quels endpoints dois-je créer et comment structurer mon projet ?",
+        "created_at": "2024-04-06T10:00:00.000Z",
+        "updated_at": "2024-04-06T10:00:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-002",
+        "sender": "assistant",
+        "text": "Pour une API REST de gestion de tâches avec Flask, voici une structure propre. Endpoints recommandés : GET /api/tasks (liste toutes les tâches), POST /api/tasks (créer une tâche), GET /api/tasks/<id> (détail d'une tâche), PUT /api/tasks/<id> (modifier), DELETE /api/tasks/<id> (supprimer), PATCH /api/tasks/<id>/complete (marquer comme faite). Structure du projet : app/ avec __init__.py, models.py, routes/tasks.py, config.py. Utilise Flask-SQLAlchemy pour les modèles et flask-marshmallow pour la sérialisation. Le modèle Task minimal : id, title, description, completed (bool), created_at, due_date.",
+        "created_at": "2024-04-06T10:02:00.000Z",
+        "updated_at": "2024-04-06T10:02:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-003",
+        "sender": "human",
+        "text": "Comment gérer l'authentification ? Je veux que chaque utilisateur ne voit que ses propres tâches.",
+        "created_at": "2024-04-06T10:10:00.000Z",
+        "updated_at": "2024-04-06T10:10:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-004",
+        "sender": "assistant",
+        "text": "Pour l'auth sur une API REST, je recommande JWT (JSON Web Tokens) avec flask-jwt-extended. Flux : 1) POST /api/auth/register (créer compte), 2) POST /api/auth/login (retourne access_token + refresh_token), 3) Toutes les routes tasks protégées par @jwt_required(). Dans chaque route, récupère l'utilisateur via get_jwt_identity() et filtre les tâches par user_id. Exemple : tasks = Task.query.filter_by(user_id=current_user_id).all(). Stocke le mot de passe hashé avec werkzeug.security.generate_password_hash. Le refresh token permet de renouveler l'access token sans redemander les credentials.",
+        "created_at": "2024-04-06T10:14:00.000Z",
+        "updated_at": "2024-04-06T10:14:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-005",
+        "sender": "human",
+        "text": "Et pour les tests, comment je teste une API Flask correctement ?",
+        "created_at": "2024-04-06T10:25:00.000Z",
+        "updated_at": "2024-04-06T10:25:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-006",
+        "sender": "assistant",
+        "text": "Pour tester une API Flask, utilise pytest avec le test client intégré. Setup : un conftest.py avec un fixture app qui crée une app en mode TEST avec une base SQLite en mémoire (SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'). Ensuite un fixture client = app.test_client(). Tests typiques : test_create_task vérifie que POST /api/tasks avec un JSON valide retourne 201 et l'objet créé. test_get_tasks vérifie le 200 et la structure de la liste. test_unauthorized vérifie que sans token on obtient 401. Utilise pytest-cov pour la couverture. Lance avec : pytest tests/ -v --cov=app.",
+        "created_at": "2024-04-06T10:30:00.000Z",
+        "updated_at": "2024-04-06T10:30:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-007",
+        "sender": "human",
+        "text": "Dernière question : comment paginer les résultats quand il y a beaucoup de tâches ?",
+        "created_at": "2024-04-06T10:40:00.000Z",
+        "updated_at": "2024-04-06T10:40:00.000Z",
+        "attachments": [],
+        "files": []
+      },
+      {
+        "uuid": "msg-008",
+        "sender": "assistant",
+        "text": "Pour la pagination, Flask-SQLAlchemy intègre paginate() nativement. Dans ton endpoint GET /api/tasks, récupère page = request.args.get('page', 1, type=int) et per_page = request.args.get('per_page', 20, type=int). Ensuite : pagination = Task.query.filter_by(user_id=uid).paginate(page=page, per_page=per_page, error_out=False). Retourne dans le JSON : items (la liste), total, pages, current_page, has_next, has_prev. Exemple d'appel : GET /api/tasks?page=2&per_page=10. Limite per_page côté serveur (ex: max 100) pour éviter les abus. Pour les APIs publiques, considère aussi le cursor-based pagination qui est plus performant sur de très grandes tables.",
+        "created_at": "2024-04-06T10:44:00.000Z",
+        "updated_at": "2024-04-06T10:44:00.000Z",
+        "attachments": [],
+        "files": []
+      }
+    ]
+  }
+]

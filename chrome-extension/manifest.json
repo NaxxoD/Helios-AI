@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Helios AI Token Tracker",
+  "version": "1.0.0",
+  "description": "Track exact AI token usage in real-time on ChatGPT, Claude.ai and Gemini.",
+
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "permissions": ["storage", "scripting", "activeTab", "tabs"],
+
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "http://localhost:8000/*"
+  ],
+
+  "background": {
+    "service_worker": "background/service_worker.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "Helios AI Tracker"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["content/content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["overlay/overlay.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

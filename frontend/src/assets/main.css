@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-text-primary font-sans;
+  }
+}
+
+/* ── Grille de fond — signal technique / réseau ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(52, 211, 153, 1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52, 211, 153, 1) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: .07;
+  pointer-events: none;
+  z-index: -1;
+}
+
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(5, 150, 105, 1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 150, 105, 1) 1px, transparent 1px);
+  opacity: .05;
+}
+
+@layer components {
+  /* Carte standard */
+  .card {
+    @apply bg-white border border-border rounded-2xl p-5;
+  }
+
+  /* Badge statut impact */
+  .badge-low     { @apply bg-green-light text-green-text text-xs font-medium px-2 py-1 rounded-full; }
+  .badge-medium  { @apply bg-orange-50 text-orange-700 text-xs font-medium px-2 py-1 rounded-full; }
+  .badge-high    { @apply bg-red-50 text-red-700 text-xs font-medium px-2 py-1 rounded-full; }
+  .badge-massive { @apply bg-purple-50 text-purple-700 text-xs font-medium px-2 py-1 rounded-full; }
+
+  /* Boutons */
+  .btn-primary {
+    @apply bg-green text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-dark transition;
+  }
+  .btn-secondary {
+    @apply border border-border text-text-secondary px-6 py-2.5 rounded-full text-sm hover:border-green hover:text-green transition;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full border border-border rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:border-green transition;
+  }
+
+  /* Nav link */
+  .nav-link {
+    @apply px-4 py-2 rounded-full text-sm text-text-secondary hover:bg-surface-hover hover:text-green transition;
+  }
+  .nav-link-active {
+    @apply px-4 py-2 rounded-full text-sm bg-gray-900 text-white font-medium;
+  }
+}

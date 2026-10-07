@@ -1,0 +1,54 @@
+{
+  "verdicts": [
+    {
+      "id": 165090,
+      "continuation": true,
+      "cost": 0.031695
+    },
+    {
+      "id": 197192,
+      "continuation": false,
+      "c1_faithful": false,
+      "c1_lossy": false,
+      "c2_faithful": false,
+      "c2_lossy": false,
+      "cost": 0.078235
+    },
+    {
+      "id": 248697,
+      "continuation": false,
+      "c1_faithful": false,
+      "c1_lossy": false,
+      "c2_faithful": true,
+      "c2_lossy": false,
+      "cost": 0.042366999999999995
+    },
+    {
+      "id": 222592,
+      "continuation": false,
+      "c1_faithful": false,
+      "c1_lossy": false,
+      "c2_faithful": false,
+      "c2_lossy": false,
+      "cost": 0.05562400000000001
+    },
+    {
+      "id": 336387,
+      "continuation": false,
+      "c1_faithful": false,
+      "c1_lossy": false,
+      "c2_faithful": false,
+      "c2_lossy": false,
+      "cost": 0.047279
+    },
+    {
+      "id": 237991,
+      "continuation": false,
+      "c1_faithful": false,
+      "c1_lossy": false,
+      "c2_faithful": false,
+      "c2_lossy": false,
+      "cost": 0.11718
+    }
+  ]
+}

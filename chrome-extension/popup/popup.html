@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helios AI Tracker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 260px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 12px;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px 10px;
+      background: #003366;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .logo {
+      width: 26px; height: 26px;
+      background: #ff6600;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 13px; color: #fff;
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .header-text p {
+      font-size: 10px;
+      color: #94a3b8;
+      margin-top: 1px;
+    }
+
+    .section {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .section-title {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 0;
+    }
+
+    .metric .lbl { color: #94a3b8; }
+    .metric .val { font-weight: 600; font-variant-numeric: tabular-nums; }
+    .metric .val.orange { color: #ff6600; font-size: 13px; }
+    .metric .val.green  { color: #4ade80; }
+    .metric .val.blue   { color: #60a5fa; }
+
+    .model-tag {
+      margin-top: 6px;
+      font-size: 10px;
+      color: #475569;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .idle-msg {
+      padding: 16px 0 8px;
+      text-align: center;
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 8px 0;
+      border: none;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 11px;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+    }
+
+    .btn-save {
+      background: #ff6600;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .btn-save:hover:not(:disabled) { background: #ff8533; }
+    .btn-save:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .btn-open {
+      background: #003366;
+      color: #e2e8f0;
+      text-decoration: none;
+      text-align: center;
+    }
+    .btn-open:hover { background: #004488; }
+
+    .btn-reset {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #64748b;
+      font-size: 10px;
+    }
+    .btn-reset:hover { border-color: rgba(255,255,255,0.2); color: #94a3b8; }
+
+    .status {
+      margin-top: 7px;
+      font-size: 10px;
+      text-align: center;
+      min-height: 14px;
+      color: #475569;
+    }
+    .status.ok  { color: #4ade80; }
+    .status.err { color: #f87171; }
+
+    .auth-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot.ok  { background: #4ade80; }
+    .dot.err { background: #f87171; }
+    .dot.loading { background: #64748b; animation: pulse 1s infinite; }
+
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">H</div>
+    <div class="header-text">
+      <h1>Helios Tracker</h1>
+      <p id="auth-label">Vérification…</p>
+    </div>
+    <div id="auth-dot" class="dot loading" style="margin-left:auto"></div>
+  </header>
+
+  <!-- Session en cours -->
+  <div class="section">
+    <div class="section-title">Session en cours</div>
+
+    <div id="idle-msg" class="idle-msg">
+      Ouvrez ChatGPT, Claude.ai<br>ou Gemini pour commencer.
+    </div>
+
+    <div id="session-data" style="display:none">
+      <div class="metric">
+        <span class="lbl">Tokens input</span>
+        <span class="val" id="p-input">—</span>
+      </div>
+      <div class="metric">
+        <span class="lbl">Tokens output</span>
+        <span class="val" id="p-output">—</span>
+      </div>
+      <div class="metric">
+        <span class="lbl">Total tokens</span>
+        <span class="val orange" id="p-total">—</span>
+      </div>
+      <div class="metric">
+        <span class="lbl">Tours</span>
+        <span class="val" id="p-turns">—</span>
+      </div>
+      <div class="metric">
+        <span class="lbl">kWh estimé</span>
+        <span class="val blue" id="p-kwh">—</span>
+      </div>
+      <div class="metric">
+        <span class="lbl">CO₂ estimé</span>
+        <span class="val green" id="p-co2">—</span>
+      </div>
+      <div class="model-tag" id="p-model">Modèle : —</div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="section">
+    <button class="btn btn-save" id="btn-save" disabled>
+      Sauvegarder dans Helios
+    </button>
+    <button class="btn btn-reset" id="btn-reset">Réinitialiser la session</button>
+    <div class="status" id="save-status"></div>
+  </div>
+
+  <!-- Ouvrir Helios -->
+  <div class="section">
+    <a href="http://localhost:3000" target="_blank" class="btn btn-open">
+      Ouvrir le Dashboard Helios
+    </a>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
