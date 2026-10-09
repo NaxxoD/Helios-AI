@@ -167,7 +167,7 @@ Le projet tourne en production via **Coolify v4** sur VPS (Docker Compose build 
 
 ## Auteurs
 
-Projet académique réalisé en équipe, 2025/2026. Conception et développement : [NaxxoD](https://github.com/NaxxoD) et Elyas (co-auteur).
+Projet académique réalisé en équipe, 2025/2026. Conception et développement : [NaxxoD](https://github.com/NaxxoD) et Elyas.
 
 ---
 
